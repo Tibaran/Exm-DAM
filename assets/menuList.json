@@ -1,0 +1,37 @@
+[
+    {
+        "titulo": "Alertas",
+        "icono": 57418,
+        "direccion": false
+    },
+    {
+        "titulo": "Avatars",
+        "icono": 57404,
+        "direccion": false
+    },
+    {
+        "titulo": "Cards - Tarjetas",
+        "icono": 58020,
+        "direccion": false
+    },
+    {
+        "titulo": "Animated Container",
+        "icono": 63189,
+        "direccion": false
+    },
+    {
+        "titulo": "Inputs",
+        "icono": 58174,
+        "direccion": true
+    },
+    {
+        "titulo": "Slider - Checks",
+        "icono": 983640,
+        "direccion": false
+    },
+    {
+        "titulo": "Listas y Scroll",
+        "icono": 58040,
+        "direccion": true
+    }
+]
