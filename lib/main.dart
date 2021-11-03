@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+// Modelo para el listado del menu
 import 'package:lab12_dam/menu_data_model.dart';
+// Pantallas
+import 'package:lab12_dam/vistas/alertas.dart';
+import 'package:lab12_dam/vistas/animado.dart';
+import 'package:lab12_dam/vistas/avatars.dart';
+import 'package:lab12_dam/vistas/inputs.dart';
+import 'package:lab12_dam/vistas/listas.dart';
+import 'package:lab12_dam/vistas/slider.dart';
+import 'package:lab12_dam/vistas/tarjetas.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,20 +22,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       title: 'Menu',
-      home: HomePage(),
+      home: const HomePage(),
+      routes: <String, WidgetBuilder>{
+        '/alertas': (BuildContext context) => const AlertasWidget(),
+        '/avatars': (BuildContext context) => const AvatarsWidget(),
+        '/tarjetas': (BuildContext context) => const TarjetasWidget(),
+        '/animado': (BuildContext context) => const AnimadoWidget(),
+        '/inputs': (BuildContext context) => const InputsWidget(),
+        '/slider': (BuildContext context) => const SliderWidget(),
+        '/listas': (BuildContext context) => const ListaWidget(),
+      },
     );
   }
 }
 
+// Constructor del menu
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
-
+// Widget del menu
 class _HomePageState extends State<HomePage> {
 
   // Fetch content from the json file
@@ -58,7 +77,15 @@ class _HomePageState extends State<HomePage> {
                 itemCount: items.length,
                 itemBuilder: (context, index){
                   return Card(
-                    child: Container(
+                    child: InkWell(
+                      splashColor: Colors.blue.withAlpha(30),
+                      onTap: (){
+                        Navigator.pushNamed(
+                          context,
+                          items[index].route.toString(),
+                        );
+                      },
+                      child: Container(
                       padding: const EdgeInsets.all(20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -88,6 +115,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
+                    ),
                   );
                 },
               );
@@ -100,6 +128,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-//58705, opcional input matchTextDirection: true
-//58040 , opcional lista matchTextDirection: true
-// constr IconData(58174, fontFamily: 'MaterialIcons', matchTextDirection: true)

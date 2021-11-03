@@ -2,36 +2,43 @@
     {
         "titulo": "Alertas",
         "icono": 57418,
-        "direccion": false
+        "direccion": false,
+        "route": "/alertas"
     },
     {
         "titulo": "Avatars",
         "icono": 57404,
-        "direccion": false
+        "direccion": false,
+        "route": "/avatars"
     },
     {
         "titulo": "Cards - Tarjetas",
         "icono": 58020,
-        "direccion": false
+        "direccion": false,
+        "route": "/tarjetas"
     },
     {
         "titulo": "Animated Container",
         "icono": 63189,
-        "direccion": false
+        "direccion": false,
+        "route": "/animado"
     },
     {
         "titulo": "Inputs",
         "icono": 58174,
-        "direccion": true
+        "direccion": true,
+        "route": "/inputs"
     },
     {
         "titulo": "Slider - Checks",
         "icono": 983640,
-        "direccion": false
+        "direccion": false,
+        "route": "/slider"
     },
     {
         "titulo": "Listas y Scroll",
         "icono": 58040,
-        "direccion": true
+        "direccion": true,
+        "route": "/listas"
     }
 ]
