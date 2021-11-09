@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       title: 'Menu',
       home: const HomePage(),
+      // Controlador de rutas
       routes: <String, WidgetBuilder>{
         '/alertas': (BuildContext context) => const AlertasWidget(),
         '/avatars': (BuildContext context) => const AvatarsWidget(),
@@ -48,7 +49,7 @@ class HomePage extends StatefulWidget {
 // Widget del menu
 class _HomePageState extends State<HomePage> {
 
-  // Fetch content from the json file
+  // Atrapar contenido del archivo json local
   Future<List<MenuDataModel>> readJson() async {
     final response = await rootBundle.loadString('assets/menuList.json');
     final data = await json.decode(response) as List<dynamic>;

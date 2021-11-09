@@ -1,3 +1,4 @@
+// Modelo para los menus, ofrece un facil almacenaje de cada opcion
 class MenuDataModel{
   int? icono;
   String? titulo;
